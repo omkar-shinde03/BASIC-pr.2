@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>contact</title>
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+   <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+   <header class="header">
+
+      <img class="logo" src="images/cutout header sbr.png">
+
+      <nav class="navbar">
+         <div id="close-navbar" class="fas fa-times"></div>
+         <a href="home.html">home</a>
+         <a href="about.html">about</a>
+         <a href="courses.html">courses</a>
+         <a href="contact.html">contact</a>
+      </nav>
+
+   </header>
+
+   <section class="heading-link">
+      <h3>contact us</h3>
+      <p> <a href="home.html">home</a> / contact </p>
+   </section>
+
+   <section class="contact">
+
+      <h1 class="heading"> Schedule your<span> APPOINTMENT</span> </h1>
+      <h2 class="heading"> contact us on info given below</h2>
+
+
+      <div class="icons-container">
+
+         <div class="icons">
+            <i class="fas fa-clock"></i>
+            <h3>opening hours :</h3>
+            <p>10:00am to 06:00pm</p>
+         </div>
+
+         <div class="icons">
+            <i class="fas fa-envelope"></i>
+            <h3> email : </h3>
+            <p>Placment@sharnbasvauniversity.edu.in</p>
+            <p>Sarnbasvauviversity.@Kalaburagi</p>
+         </div>
+
+         <div class="icons">
+            <i class="fas fa-map"></i>
+            <h3>address :</h3>
+            <p>Sharnbasva University ,Kalaburagi,Karnataka,585103</p>
+         </div>
+
+      </div>
+
+   </section>
+
+   <section class="heading-link">
+      <h3>contact us</h3>
+
+      <div class="text">
+
+
+         <form method="post" action="" name="contactform" id="contactform">
+
+            <input type="text" class="form-control" placeholder="Full Name" name="name" id="name" />
+            <br />
+            <input type="email" class="form-control" placeholder="Email" name="email" id="email" />
+            <br />
+           
+            <br />
+            <input type="submit" value="submit" class="btn"id="submit" />
+         </form>
+      </div>
+      
+<script>
+   const scriptURL = 'https://script.google.com/macros/s/AKfycbz2soaEo-aVe0nq18V7of5kZDmb4cl5ke2IZetsF1W8ZQvAqPUuhWU4wIX9OD7EA_ftXw/exec'
+   const form = document.forms['contactform']
+  
+   form.addEventListener('submit', e => {
+     e.preventDefault()
+     fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => alert("Thank you! your details are submitted successfully. WE will contact you soon " ))
+      .then(() => {  window.location.reload(); })
+      .catch(error => console.error('Error!', error.message))
+   })
+  </script>
+
+   </section>
+
+   <section class="logo-container">
+      <div class="swiper logo-slider">
+         <div class="swiper-wrapper">
+            <div class="swiper-slide"> <img src="images/god.jpg" alt=""> </div>
+
+         </div>
+      </div>
+   </section>
+
+   <section class="footer">
+
+      <div class="box-container">
+
+         <div class="box">
+            <img class="logo" src="images/god.jpg">
+            <div class="share">
+               <a href="#" class="fab fa-facebook-f"></a>
+               <a href="#" class="fab fa-twitter"></a>
+               <a href="#" class="fab fa-instagram"></a>
+               <a href="#" class="fab fa-linkedin"></a>
+            </div>
+         </div>
+
+         <div class="box">
+            <h3>quick links</h3>
+            <a href="home.html" class="link">home</a>
+            <a href="about.html" class="link">about</a>
+            <a href="courses.html" class="link">courses</a>
+            <a href="contact.html" class="link">contact</a>
+         </div>
+         <div class="credit"> Copyright © 2023 Sharnbasva University,Kalaburagi
+            Designed & Developed by B.C.A  Department </div>
+      </div>
+   </section>
+
+   <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+   <script src="js/script.js"></script>
+
+</body>
+
+</html>
